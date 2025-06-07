@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Ballena Azul</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f2f1;
+            color: #004d40;
+        }
+
+        header {
+            background-color: #00695c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #004d40;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #b2dfdb;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #80cbc4;
+        }
+
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>La Ballena Azul</h1>
+    <p>El animal más grande de la Tierra</p>
+</header>
+
+<nav>
+    <a href="#tamanio">Tamaño</a>
+    <a href="#comparacion">Comparación</a>
+    <a href="#curiosidades">Curiosidades</a>
+</nav>
+
+<main>
+    <section id="tamanio">
+        <h2>Tamaño y Peso</h2>
+        <p>La ballena azul puede alcanzar hasta <strong id="longitud">30 metros</strong> de largo y pesar alrededor de <strong id="peso">180 toneladas</strong>. ¡Es más larga que un autobús escolar y más pesada que 25 elefantes!</p>
+        <button onclick="cambiarUnidades()">Cambiar a unidades imperiales</button>
+      <br><br> 
+ <img src="001.jpg">
+    </section>
+
+    <section id="comparacion">
+        <h2>Comparación con Otras Ballenas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Especie</th>
+                    <th>Longitud Promedio</th>
+                    <th>Peso Promedio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ballena Azul</td>
+                    <td>25–30 m</td>
+                    <td>120–180 toneladas</td>
+                </tr>
+                <tr>
+                    <td>Rorcual Común</td>
+                    <td>18–22 m</td>
+                    <td>50–80 toneladas</td>
+                </tr>
+                <tr>
+                    <td>Ballena Jorobada</td>
+                    <td>12–16 m</td>
+                    <td>25–30 toneladas</td>
+                </tr>
+                <tr>
+                    <td>Ballena Gris</td>
+                    <td>11–15 m</td>
+                    <td>30–40 toneladas</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="curiosidades">
+        <h2>Curiosidades</h2>
+        <ul>
+            <li>El corazón de una ballena azul puede pesar más de 180 kg.</li>
+            <li>Sus vocalizaciones pueden escucharse a más de 1,000 km de distancia.</li>
+            <li>Viven en todos los océanos, excepto el Ártico.</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p> Ballena Azul</p>
+</footer>
+
+<script>
+    let enMetricas = true;
+
+    function cambiarUnidades() {
+        const longitud = document.getElementById("longitud");
+        const peso = document.getElementById("peso");
+        const boton = document.querySelector("button");
+
+        if (enMetricas) {
+            longitud.textContent = "98 pies";
+            peso.textContent = "400,000 libras";
+            boton.textContent = "Cambiar a unidades métricas";
+        } else {
+            longitud.textContent = "30 metros";
+            peso.textContent = "180 toneladas";
+            boton.textContent = "Cambiar a unidades imperiales";
+        }
+        enMetricas = !enMetricas;
+    }
+</script>
+
+</body>
+</html>

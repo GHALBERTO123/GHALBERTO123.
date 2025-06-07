@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conservación de Ballenas Azules</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0f7fa;
+      padding: 20px;
+      color: #004d40;
+    }
+    h1 {
+      text-align: center;
+      color: #00695c;
+    }
+    form {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #00796b;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Encuesta: Ayuda a las Ballenas Azules</h1>
+
+  <form action="#" method="post">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="nivel_conocimiento">¿Qué tanto sabes sobre las ballenas azules?</label>
+    <select id="nivel_conocimiento" name="nivel_conocimiento">
+      <option value="nada">Nada</option>
+      <option value="poco">Un poco</option>
+      <option value="moderado">Conocimiento moderado</option>
+      <option value="mucho">Mucho</option>
+    </select>
+
+    <label for="interes">¿Te gustaría recibir información educativa sobre ellas?</label>
+    <select id="interes" name="interes">
+      <option value="si">Sí</option>
+      <option value="no">No</option>
+      <option value="tal_vez">Tal vez</option>
+    </select>
+
+    <label for="voluntariado">¿Estarías interesado/a en participar en actividades de conservación?</label>
+    <select id="voluntariado" name="voluntariado">
+      <option value="si">Sí</option>
+      <option value="no">No</option>
+      <option value="depende">Depende de la actividad</option>
+    </select>
+
+    <label for="mensaje">¿Hay algo que te gustaría compartir o preguntar?</label>
+    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Tu mensaje aquí..."></textarea>
+
+    <button type="submit">Enviar Encuesta</button>
+  </form>
+
+</body>
+</html>
